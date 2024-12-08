@@ -58,28 +58,6 @@ EmptyWorkingSets() {
     SendInput, w
 }
 
-EmptySystemWorkingSet() {
-    ActivateRamMapWindow(GetRamMapTitle())
-    SendInput, {Alt down}
-    Sleep, 25
-    SendInput, e
-    Sleep, 25
-    SendInput, {Alt up}
-    Sleep, 25
-    SendInput, s
-}
-
-EmptyModifiedPageList() {
-    ActivateRamMapWindow(GetRamMapTitle())
-    SendInput, {Alt down}
-    Sleep, 25
-    SendInput, e
-    Sleep, 25
-    SendInput, {Alt up}
-    Sleep, 25
-    SendInput, m
-}
-
 EmptyStandbyList() {
     ActivateRamMapWindow(GetRamMapTitle())
     SendInput, {Alt down}
@@ -89,17 +67,6 @@ EmptyStandbyList() {
     SendInput, {Alt up}
     Sleep, 25
     SendInput, t
-}
-
-EmptyPriority0StandbyList() {
-    ActivateRamMapWindow(GetRamMapTitle())
-    SendInput, {Alt down}
-    Sleep, 25
-    SendInput, e
-    Sleep, 25
-    SendInput, {Alt up}
-    Sleep, 25
-    SendInput, l
 }
 
 Refresh() {
@@ -164,29 +131,14 @@ Progress, p15, Preparing, Cleanup, RAMMap Cleanup
 
 WaitUntilFinished()
 
-Progress, 30, Empty Working Sets
+Progress, 50, Empty Working Sets
 
 EmptyWorkingSets()
-WaitUntilFinished()
-
-Progress, 45, Empty System Working Set
-
-EmptySystemWorkingSet()
-WaitUntilFinished()
-
-Progress, 60, Empty Modified Page List
-
-EmptyModifiedPageList()
 WaitUntilFinished()
 
 Progress, 75, Empty Standby List
 
 EmptyStandbyList()
-WaitUntilFinished()
-
-Progress, 90, Empty Priority 0 Standby List
-
-EmptyPriority0StandbyList()
 WaitUntilFinished()
 
 Progress, 100, Finishing
